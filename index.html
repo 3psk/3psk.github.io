@@ -9,8 +9,10 @@
 
         <script async>
             fetch('/data/db.csv', {cache: "no-store"})
-                .then(responce => responce.text())
-                .then(text => document.body.innerHTML = '<div uk-alert>'+text+'</div>')
+                .then(responce => {
+                    text = await responce.text()
+                    document.body.innerHTML = '<div uk-alert>'+text+'</div>'
+                })
         </script>
     </head>
     <body>
