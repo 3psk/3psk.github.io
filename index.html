@@ -9,13 +9,26 @@
 
         <script async>
             fetch('/data/db.csv', {cache: "no-store"})
-                .then(responce => {
-                    text = await responce.text()
-                    document.body.innerHTML = '<div uk-alert>'+text+'</div>'
-                })
+                .then(responce => responce.text())
+                .then(text => document.body.innerHTML = '<div uk-alert>'+text+'</div>')
         </script>
     </head>
     <body>
+        <div>
+            <ul class="uk-nav-default" uk-nav>
+                <li class="uk-nav-header">Header</li>
+                    <li><a href="#">Sub item</a></li>
+                    <li><a href="#">Sub item</a></li>
+                <li class="uk-nav-header">Header</li>
+                    <li><a href="#">Sub item</a></li>
+                    <li><a href="#">Sub item</a></li>
+            </ul>
+        </div>
+        <div>
 
+        </div>
+        <div>
+
+        </div>
     </body>
 </html>
