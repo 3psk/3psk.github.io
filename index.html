@@ -10,7 +10,7 @@
         <script async>
             fetch('/data/db.csv')
                 .then(responce => responce.text())
-                .then(text => alert(text))
+                .then(text => document.body.append('<div uk-alert>'+text+'</div>'))
         </script>
     </head>
     <body>
