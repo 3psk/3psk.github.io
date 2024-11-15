@@ -2,9 +2,8 @@
     <head>
         <script async>
             fetch('/data/db.csv')
-                .then(responce => {
-                    alert(responce.text())
-                })
+                .then(responce => responce.text())
+                .then(text => alert(text))
         </script>
     </head>
     <body>
