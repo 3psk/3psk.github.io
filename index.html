@@ -8,7 +8,7 @@
         <script src="https://cdn.jsdelivr.net/npm/uikit@latest/dist/js/uikit-icons.min.js"></script>
 
         <script async>
-            fetch('/data/db.csv')
+            fetch('/data/db.csv', {cache: "no-store"})
                 .then(responce => responce.text())
                 .then(text => document.body.innerHTML = '<div uk-alert>'+text+'</div>')
         </script>
